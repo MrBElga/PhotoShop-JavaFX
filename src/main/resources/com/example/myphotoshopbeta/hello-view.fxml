@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="510.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myphotoshopbeta.HelloController">
+   <top>
+      <VBox prefHeight="64.0" prefWidth="654.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu text="_Arquivo">
+                  <items>
+                        <MenuItem onAction="#onAbrirArquivo" text="_Abrir">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#onSalvar" text="_Salvar">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem onAction="#onSalvarComo" text="Salvar _Como">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem />
+                    <MenuItem onAction="#onFechar" text="_Fechar">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="F" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu text="_Edit">
+                  <items>
+                    <MenuItem onAction="#onTonsCinza" text="_Tons de Cinza" />
+                        <MenuItem onAction="#onPretoBranco" text="_Preto e Branco" />
+                        <MenuItem onAction="#onEspelharH" text="Espelhar _Horizontal" />
+                        <MenuItem onAction="#onEspelharV" text="Espelhar _Vertical" />
+                        <MenuItem onAction="#onNegativo" text="_Negativo" />
+                        <Menu text="_ImageJ">
+                          <items>
+                            <MenuItem onAction="#onDilatar" text="_Dilatação" />
+                              <MenuItem onAction="#onErosao" text="_Erosão" />
+                              <MenuItem onAction="#onExpo" text="_Exponenciaçẫo" />
+                              <MenuItem onAction="#onSuv" text="_Suavizar" />
+                              <MenuItem onAction="#onConv" text="_Convoluçẫo" />
+                          </items>
+                        </Menu>
+                  </items>
+                </Menu>
+                <Menu text="_Help">
+                  <items>
+                    <MenuItem onAction="#onAbrirSobre" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white;">
+              <items>
+                <Button mnemonicParsing="false" onAction="#onAbrirArquivo" prefHeight="50.0" prefWidth="50.0" style="-fx-background-image: url('abrir.png'); -fx-background-color: transparent; -fx-background-position: center center;" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSalvar" prefHeight="50.0" prefWidth="50.0" style="-fx-background-image: url('salvar.png'); -fx-background-color: transparent; -fx-background-position: center center;" />
+                  <Separator prefHeight="50.0" prefWidth="51.0" />
+                  <Button layoutX="227.0" layoutY="10.0" mnemonicParsing="false" onAction="#onEspelharV" prefHeight="50.0" prefWidth="50.0" style="-fx-background-image: url('espelharH.png'); -fx-background-color: transparent; -fx-background-position: center center;" />
+                  <Button layoutX="64.0" layoutY="10.0" mnemonicParsing="false" onAction="#onEspelharH" prefHeight="50.0" prefWidth="50.0" style="-fx-background-image: url('espelharV.png'); -fx-background-color: transparent; -fx-background-position: center center;" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#onClickar" onMouseDragged="#onPress" pickOnBounds="true" preserveRatio="true" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

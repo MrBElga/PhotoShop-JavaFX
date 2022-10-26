@@ -1,0 +1,8 @@
+a) Colocar filtros na FileChooser para JPEG, JPG, GIF e PNG [V]
+b) Opção Salvar Como: deve pedir um novo nome para a imagem [V]
+c) Opção Fechar: verificar se houve alterações na imagem, caso positivo pergunte se o usuário deseja salvar.
+d) Habilite e desabilite as opções dos menus, de acordo com a interação do usuário 
+e) Faça as opções: tons de cinza, preto e branco, negativo, espelhar horizontal e vertical. [V]
+f) Adicione mais quatro opções de processamento de imagens, utilizando a biblioteca ImageJ 
+g) No menu help, coloque a opção "Sobre" que deve abrir uma janela com informações sobre o aplicativo, incluindo os desenvolvedores.[V]
+DESAFIO: criar uma ferramenta estilo "caneta"; que deve desenhar na imagem (riscar) enquanto arrastar o cursor do mouse com o botão esquerdo do mouse pressionado.[V]
